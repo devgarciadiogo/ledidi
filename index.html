@@ -16,7 +16,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse d-lg-flex justfy-content-end" id="#navbarSupportedContent">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">QUEM SOMOS</a>
               </li>
@@ -30,19 +30,47 @@
           </div>
         </div>
       </nav>
-    
     </header>
-
     <main>
-
+      <section id="quem-somos">
+        <h2>QUEM SOMOS</h2>
+        <h5>Place Holder para texto explicativo piriripororo</h5>
+      </section>
+      <section id="servicos-oferecidos">
+        <div class="servico">
+          <img src="img/cabelo.png" alt="cabelo">
+          <p>Realizamos serviços capilares</p>
+        </div>
+        <div class="servico">
+          <img src="img/unha.png" alt="pe">
+          <p>Realizamos serviços de manicure</p>
+        </div>
+        <div class="servico">
+          <img src="img/pe.png" alt="pe">
+          <p>Realizamos serviços de pedicure</p>
+        </div>
+      </section>
+      <section id="agendamento">
+        <h2>AGENDAMENTO</h2>
+        <form>
+          <div class="secao-form">
+            <label for="input-nome"">Nome</label>
+            <input type="text" aria-describedby="nameHelp" placeholder="Insira seu nome completo">
+          </div>
+          <div class="secao-form">
+            <label for="input-telefone">Telefone</label>
+            <input type="tel" aria-describedby="telHelp" placeholder="Insira seu telefone (sem DDD)">
+          </div>
+          <div class="secao-form">
+            <label for="input-data">Data e Hora</label>
+            <input type="datetime-local" aria-describedby="dateHelp">
+          </div>
+        </form>
+      </section>
     </main>
 
     <footer>
 
     </footer>
- 
-    <script>
-        src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-    </script>
   </body>
 </html>
