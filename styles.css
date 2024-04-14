@@ -2,6 +2,22 @@
     color: #000000;
 }
 
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+form{
+    padding: 40px 0;
+}
+form label{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
 .footer-final{
     text-align: center;
 }
+
