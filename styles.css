@@ -26,7 +26,7 @@ body{
 
 #agendamento{
     margin-top: 0px;
-    padding: 0 25px;
+    padding: 5px 25px;
     color: #D4AF37;
 }
 
@@ -64,17 +64,45 @@ form label{
     height: 35px;
 }
 
-#rodape{
+footer{
     color: #D4AF37;
-    padding: 5px 25px;
-    display: flex;
+   
 }
 
-#lista-info{
+.div-logo{
+    margin: 0 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.endereco-footer{
     list-style: none;
     display: flex;
-    flex-direction: row;
-    margin-bottom: 5px;
+    flex-direction: column;
+    margin: -60px 0 0 45rem;
+
+}
+
+.fc-footer{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 45rem;
+}
+
+.contact-footer{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 45rem;
+}
+
+.redes-footer{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 80rem;
+    
 }
 
 #footer-final{
