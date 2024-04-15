@@ -2,21 +2,70 @@
     color: #000000;
 }
 
+body{
+    background-color: black;
+}
+
+#quem-somos{
+    color: #D4AF37;
+    padding: 5px 25px;
+}
+
+#servicos-oferecidos{
+    color: #D4AF37;
+    padding: 5px 25px;
+}
+
 ul{
     list-style: none;
+    margin-top: 1rem;
     display: flex;
     justify-content: space-around;
 }
 
+#agendamento{
+    color: #D4AF37;
+}
 
 form{
-    padding: 40px 0;
+    padding: 5px 25px;
 }
+
 form label{
     display: block;
     font-size: 20px;
     margin: 0 0 10px 0;
 }
+
+.input-name {
+    display: block;
+	margin-bottom: 20px;
+	padding: 10px 25px;
+	width: 30%;
+    height: 35px;
+}
+
+.input-tel{
+    display: block;
+	margin-bottom: 20px;
+	padding: 10px 25px;
+	width: 30%;
+    height: 35px;
+}
+
+.input-date{
+    display: block;
+	margin-bottom: 20px;
+	padding: 10px 25px;
+	width: 30%;
+    height: 35px;
+}
+
+.rodape{
+    color: #D4AF37;
+    padding: 5px 25px;
+}
+
 .footer-final{
     text-align: center;
 }
