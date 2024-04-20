@@ -1,5 +1,26 @@
+@font-face {
+    font-family: 'rightland' ;
+    src: url(/fonts/Rightland.ttf);
+}
+
+#logoledidi{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.navbar-brand {
+    font-family: 'rightland';
+    font-size: 30px;
+    padding: 10px 0 0 80px;
+}
+
+.nav-item{
+    font-weight: 500;
+    font-size: 19px;
+}
+
 .nav-link{
-    color: #000000;
+    color: black;
 }
 
 body{
@@ -103,7 +124,7 @@ footer{
 .redes-footer{
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 80rem;
+    margin: 0 0 0 100rem;
     
 }
 
