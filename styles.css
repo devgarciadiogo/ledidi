@@ -26,7 +26,14 @@
 body{
     background-color: black;
 }
-
+#Home-figuras{
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
 #quem-somos{
     color: #D4AF37;
     padding: 5px 25px;
@@ -124,7 +131,7 @@ footer{
 .redes-footer{
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 100rem;
+    margin: 0 0 0 80rem;
     
 }
 
