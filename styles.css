@@ -8,7 +8,7 @@
   height: auto;
   display: block;
 }
-.navbar-brand {
+.navbar-brand{
   font-family: 'rightland';
   font-size: 30px;
   padding: 10px 0 0 80px;
@@ -26,14 +26,18 @@
 body{
   background-color: black;
 }
+
 #home-figuras{
   list-style: none;
   display: flex;
   justify-content: space-around;
+  padding: 0 10px 0 10px;
 }
 
 .imagens-trabalhos{
-  border: 4px solid #D4AF37;  
+  border: 4px solid #D4AF37;
+  text-align: center;
+  display: block;
 }
 
 #quem-somos{
@@ -63,6 +67,7 @@ body{
 }
 
 main{
+  color: #D4AF37;
   min-height: 50rem;
 }
 
@@ -105,7 +110,7 @@ footer{
 }
 
 .div-logo{
-  max-width: 200px;
+  max-width: 400px;
   max-height: 200px;
   width: auto;
   height: auto;
@@ -127,7 +132,7 @@ footer{
   padding: 0 0 0 55rem;
 }
 
-#contact-footer{
+#contatos-footer{
   padding: 0 0 0 55rem;
 }
 
@@ -146,9 +151,6 @@ footer{
 
 .footer-completo{
   list-style: none;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
   min-height: 8rem;
 }
 
