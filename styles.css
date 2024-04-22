@@ -32,6 +32,12 @@ main{
   min-height: 50rem;
   padding: 0 50px 0 50px;
 }
+#ledidi-txt{
+  padding: 20px 0 18px 0;
+}
+#texto-trabalhos{
+  padding: 0 0 18px 0;
+}
 
 #historias-servicos{
   padding: 10px 0 0 0;
@@ -52,12 +58,11 @@ main{
   border: 4px solid #D4AF37;
   text-align: center;
   display: block;
-  margin: 0 0 0 85px;
+  margin: 0 130px 20px 130px;
 }
 
-#quem-somos{
-  color: #D4AF37;
-  padding: 5px 25px;
+#quemsomos-txt{
+  padding: 20px 0 38px 0;
 }
 
 #tatiana-claudio{
@@ -84,16 +89,23 @@ main{
 .imagens-funcionarios{
   max-width: 400px;
   max-height: 400px;
+  margin: 0 130px 20px 130px;
   border: 4px solid #D4AF37;
   text-align: center;
   display: block;
   
 }
 
+#nossa-equipe{
+  padding: 0 0 28px 0;
+}
 #servicos-oferecidos{
   color: #D4AF37;
   padding: 5px 50px;
   margin-bottom: 0px;
+}
+#servicos-txt{
+  padding: 20px 0 28px 0;
 }
 
 #lista-servicos{
