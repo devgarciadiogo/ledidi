@@ -116,12 +116,23 @@ main{
   justify-content: space-around;
 }
 
+.imagens-servicos{
+  max-width: 500px;
+  max-height: 500px;
+  margin: 0 0 20px 0;
+  border: 4px solid #D4AF37;
+  display: block;
+}
+
+.servicos{
+  max-width: 500px;
+}
+
 #agendamento{
   margin: 0 0 0 0;
   padding: 50px 25px;
   color: #D4AF37;
 }
-
 
 form{
   padding: 5px 25px;
@@ -216,4 +227,39 @@ footer{
   padding: 450px 0 0 0;
   color: #D4AF37;
   text-align: center;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .content-container {
+      padding-top: 10em;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .content-containerr {
+      padding-top: 12em;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .content-container {
+      padding-top: 15em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .content-container {
+      padding-top: 17em;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .content-container {
+      padding-top: 26em;
+  }
 }
