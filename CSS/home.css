@@ -1,0 +1,39 @@
+/* Estilos para telas menores que 576px (telefones pequenos em modo retrato) */
+@media (max-width: 575.98px) {
+    /* Estilos para o cabeçalho */
+    header {
+      padding: 10px;
+    }
+  
+    /* Estilos para o texto principal */
+    main {
+      padding: 10px;
+    }
+  
+    /* Estilos para o rodapé */
+    footer {
+      padding: 10px;
+    }
+  }
+  
+  /* Estilos para telas entre 576px e 767px (telefones maiores em modo paisagem e tablets pequenos) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    /* Adicione seus estilos aqui */
+  }
+  
+  /* Estilos para telas entre 768px e 991px (tablets e telas menores) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    /* Adicione seus estilos aqui */
+  }
+  
+  /* Estilos para telas entre 992px e 1199px (telas maiores, como laptops) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Adicione seus estilos aqui */
+  }
+  
+  /* Estilos para telas maiores que 1200px (telas grandes, como desktops) */
+  @media (min-width: 1200px) {
+    
+  }
+
+    /* Adicione seus estilos aqui */

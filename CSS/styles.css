@@ -83,13 +83,13 @@ main{
 
 #tatiana-claudio{
   border: 4px solid #D4AF37;
-  margin: 0 0 0 660px;
+  margin: 0 0 0 500px;
 }
 
 .imagens-funcionarios{
   max-width: 400px;
   max-height: 400px;
-  margin: 0 130px 20px 130px;
+  margin: 0 100px 20px 100px;
   border: 4px solid #D4AF37;
   text-align: center;
   display: block;
@@ -99,13 +99,14 @@ main{
 #nossa-equipe{
   padding: 0 0 28px 0;
 }
+
 #servicos-oferecidos{
   color: #D4AF37;
   padding: 5px 50px;
   margin-bottom: 0px;
 }
 #servicos-txt{
-  padding: 20px 0 28px 0;
+  padding: 20px 0 5px 0;
 }
 
 #lista-servicos{
@@ -116,16 +117,22 @@ main{
   justify-content: space-around;
 }
 
+.categorias-serviços{
+  padding: 0 0 10px 60px;
+
+}
+
 .imagens-servicos{
   max-width: 500px;
   max-height: 500px;
-  margin: 0 0 20px 0;
+  margin: 0 0 20px 60px;
   border: 4px solid #D4AF37;
   display: block;
 }
 
 .servicos{
   max-width: 500px;
+  
 }
 
 #agendamento{
@@ -227,39 +234,4 @@ footer{
   padding: 450px 0 0 0;
   color: #D4AF37;
   text-align: center;
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .content-container {
-      padding-top: 10em;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .content-containerr {
-      padding-top: 12em;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .content-container {
-      padding-top: 15em;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .content-container {
-      padding-top: 17em;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .content-container {
-      padding-top: 26em;
-  }
 }

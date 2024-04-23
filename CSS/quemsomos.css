@@ -1,0 +1,16 @@
+/* Estilos específicos para a página "quem-somos.html" */
+
+/* Estilos para telas menores */
+@media only screen and (max-width: 768px) {
+    /* Adicione os estilos para telas menores aqui */
+  }
+  
+  /* Estilos para tablets e telas maiores */
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Adicione os estilos para tablets aqui */
+  }
+  
+  /* Estilos para desktops e telas maiores */
+  @media only screen and (min-width: 1025px) {
+    /* Adicione os estilos para desktops aqui */
+  }
