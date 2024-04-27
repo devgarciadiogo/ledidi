@@ -1,39 +1,139 @@
-/* Estilos para telas menores que 576px (telefones pequenos em modo retrato) */
-@media (max-width: 575.98px) {
-    /* Estilos para o cabeçalho */
-    header {
-      padding: 10px;
-    }
-  
-    /* Estilos para o texto principal */
-    main {
-      padding: 10px;
-    }
-  
-    /* Estilos para o rodapé */
-    footer {
-      padding: 10px;
-    }
-  }
-  
-  /* Estilos para telas entre 576px e 767px (telefones maiores em modo paisagem e tablets pequenos) */
-  @media (min-width: 576px) and (max-width: 767.98px) {
-    /* Adicione seus estilos aqui */
-  }
-  
-  /* Estilos para telas entre 768px e 991px (tablets e telas menores) */
-  @media (min-width: 768px) and (max-width: 991.98px) {
-    /* Adicione seus estilos aqui */
-  }
-  
-  /* Estilos para telas entre 992px e 1199px (telas maiores, como laptops) */
-  @media (min-width: 992px) and (max-width: 1199.98px) {
-    /* Adicione seus estilos aqui */
-  }
-  
-  /* Estilos para telas maiores que 1200px (telas grandes, como desktops) */
-  @media (min-width: 1200px) {
-    
+@font-face {
+    font-family: 'rightland' ;
+    src: url(/fonts/Rightland.ttf);
   }
 
-    /* Adicione seus estilos aqui */
+#logoledidi{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+  .navbar-brand{
+    font-family: 'rightland';
+    font-size: 30px;
+    padding: 10px 0 0 80px;
+  }
+  
+  .nav-item{
+    font-weight: 500;
+    font-size: 19px;
+  }
+  
+  .nav-link{
+    color: black;
+  }
+
+  body{
+    background-color: black;
+    display: grid;
+  }
+  
+  main{
+    color: #D4AF37;
+    min-height: 50rem;
+    padding: 0 50px 0 50px;
+  }
+
+  #ledidi-txt{
+    padding: 20px 0 18px 0;
+  }
+
+  #historias-servicos{
+    padding: 10px 0 0 0;
+  }
+
+  #texto-trabalhos{
+    padding: 0 0 18px 0;
+  }
+
+  .lista-figuras{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10px 0 10px;
+  }
+  
+  .imagens-trabalhos{
+    border: 4px solid #D4AF37;
+    text-align: center;
+    display: block;
+    margin: 0 130px 20px 130px;
+  }
+
+  .historias-figuras{
+    padding: 0 20px 0 0;
+  }
+
+  footer{
+    color: #D4AF37;
+  }
+
+  .div-logo{
+    max-width: 500px;
+    max-height: 200px;
+    margin: 0 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    padding: 0 0 0 0;
+  }
+
+  .titulos{
+    font-size: 28px;
+  }
+  
+  .subtitulos{
+    font-size: 20px;
+    color: #a6acaf;
+  }
+
+  #coluna-central{
+    padding: 100px 0 0 0;
+  }
+  
+  #endereco-footer{
+    padding: 0 0 0 55rem;
+  }
+  
+  #fc-footer{
+    padding: 0 0 0 55rem;
+  }
+  
+  #contatos-footer{
+    padding: 0 0 0 55rem;
+  }
+
+  #redes-footer{
+    padding:  0 0 0 90rem;
+    margin-top: -468px;
+  }
+
+  .sociais{
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  .footer-completo{
+    list-style: none;
+    min-height: 8rem;
+    padding: 0 0 0 0;
+  }
+
+  #footer-final{
+    padding: 450px 0 0 0;
+    color: #D4AF37;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 500px) {
+    
+    body{
+      float:left;
+      width: 100%;
+      min-width: 200px; 
+      height: auto;
+      text-align: center;
+      margin-bottom: 5px;
+      box-sizing: border-box;
+    }
+  }

@@ -1,16 +1,131 @@
-/* Estilos específicos para a página "agendamento.html" */
+@font-face {
+  font-family: 'rightland' ;
+  src: url(/fonts/Rightland.ttf);
+}
+  
+#logoledidi{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.navbar-brand{
+  font-family: 'rightland';
+  font-size: 30px;
+  padding: 10px 0 0 80px;
+}
+  
+.nav-item{
+  font-weight: 500;
+  font-size: 19px;
+}
+  
+.nav-link{
+  color: black;
+}
+  
+body{
+  background-color: black;
+  display: grid;
+}
 
-/* Estilos para telas menores */
-@media only screen and (max-width: 768px) {
-    /* Adicione os estilos para telas menores aqui */
-  }
+#agendamento{
+  margin: 0 0 0 0;
+  padding: 50px 25px;
+  color: #D4AF37;
+}
   
-  /* Estilos para tablets e telas maiores */
-  @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    /* Adicione os estilos para tablets aqui */
-  }
+form{
+  padding: 5px 25px;
+}
   
-  /* Estilos para desktops e telas maiores */
-  @media only screen and (min-width: 1025px) {
-    /* Adicione os estilos para desktops aqui */
-  }
+form label{
+  display: block;
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+  
+.input-name {
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 25px;
+  width: 30%;
+  height: 35px;
+}
+  
+.input-tel{
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 25px;
+  width: 30%;
+  height: 35px;
+}
+  
+.input-date{
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 25px;
+  width: 30%;
+  height: 35px;
+}
+
+footer{
+  color: #D4AF37;
+}
+
+.div-logo{
+  max-width: 500px;
+  max-height: 200px;
+  margin: 0 0 0 50px;
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  padding: 0 0 0 0;
+}
+
+.titulos{
+  font-size: 28px;
+}
+  
+.subtitulos{
+  font-size: 20px;
+  color: #a6acaf;
+}
+
+#coluna-central{
+  padding: 100px 0 0 0;
+}
+  
+#endereco-footer{
+  padding: 0 0 0 55rem;
+}
+  
+#fc-footer{
+  padding: 0 0 0 55rem;
+}
+  
+#contatos-footer{
+  padding: 0 0 0 55rem;
+}
+
+#redes-footer{
+  padding:  0 0 0 90rem;
+  margin-top: -468px;
+}
+
+.sociais{
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.footer-completo{
+  list-style: none;
+  min-height: 8rem;
+  padding: 0 0 0 0;
+}
+
+#footer-final{
+  padding: 450px 0 0 0;
+  color: #D4AF37;
+  text-align: center;
+}
+  

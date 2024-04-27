@@ -1,16 +1,141 @@
-/* Estilos específicos para a página "quem-somos.html" */
+@font-face {
+  font-family: 'rightland' ;
+  src: url(/fonts/Rightland.ttf);
+}
 
-/* Estilos para telas menores */
-@media only screen and (max-width: 768px) {
-    /* Adicione os estilos para telas menores aqui */
-  }
+.navbar-brand{
+  font-family: 'rightland';
+  font-size: 30px;
+  padding: 10px 0 0 80px;
+}
   
-  /* Estilos para tablets e telas maiores */
-  @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    /* Adicione os estilos para tablets aqui */
-  }
+.nav-item{
+  font-weight: 500;
+  font-size: 19px;
+}
   
-  /* Estilos para desktops e telas maiores */
-  @media only screen and (min-width: 1025px) {
-    /* Adicione os estilos para desktops aqui */
-  }
+.nav-link{
+  color: black;
+}
+
+body{
+  background-color: black;
+  display: grid;
+}
+  
+main{
+  color: #D4AF37;
+  min-height: 50rem;
+  padding: 0 50px 0 50px;
+}
+
+#quemsomos-txt{
+  padding: 20px 0 38px 0;
+}
+
+#origem{
+  display: flex;
+  flex-direction: row;
+}
+  
+#historia-origem{
+  max-width: 800px;
+}
+
+#tatiana-claudio{
+  max-width: 400px;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  border: 4px solid #D4AF37;
+  margin: 0 0 0 500px;
+}
+
+#nossa-equipe{
+  padding: 0 0 28px 0;
+}
+
+  
+.lista-figuras{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10px 0 10px;
+}
+  
+.imagens-funcionarios{
+  max-width: 400px;
+  max-height: 400px;
+  margin: 0 100px 20px 100px;
+  border: 4px solid #D4AF37;
+  text-align: center;
+  display: block;
+}
+  
+.historias-figuras{
+  padding: 0 20px 0 0;
+}
+
+footer{
+  color: #D4AF37;
+}
+
+.div-logo{
+  max-width: 500px;
+  max-height: 200px;
+  margin: 0 0 0 50px;
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  padding: 0 0 0 0;
+}
+
+.titulos{
+  font-size: 28px;
+}
+  
+.subtitulos{
+  font-size: 20px;
+  color: #a6acaf;
+}
+
+#coluna-central{
+  padding: 100px 0 0 0;
+}
+  
+#endereco-footer{
+  padding: 0 0 0 55rem;
+}
+  
+#fc-footer{
+  padding: 0 0 0 55rem;
+}
+  
+#contatos-footer{
+  padding: 0 0 0 55rem;
+}
+
+#redes-footer{
+  padding:  0 0 0 90rem;
+  margin-top: -468px;
+}
+
+.sociais{
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.footer-completo{
+  list-style: none;
+  min-height: 8rem;
+  padding: 0 0 0 0;
+}
+
+#footer-final{
+  padding: 450px 0 0 0;
+  color: #D4AF37;
+  text-align: center;
+}
+  
+  
+  
