@@ -52,7 +52,7 @@ form label{
   height: 35px;
 }
   
-.input-tel{
+.tel-cadastro{
   display: block;
   margin-bottom: 20px;
   padding: 10px 25px;
@@ -60,21 +60,21 @@ form label{
   height: 35px;
 }
   
-.input-date{
+.date-cadastro{
   display: block;
   margin-bottom: 20px;
   padding: 10px 25px;
   width: 30%;
   height: 35px;
 }
-.input-email{
+.email-cadastro{
   display: block;
   margin-bottom: 20px;
   padding: 10px 25px;
   width: 30%;
   height: 35px;
 }
-.input-password{
+.senha-cadastro{
   display: block;
   margin-bottom: 20px;
   padding: 10px 25px;
