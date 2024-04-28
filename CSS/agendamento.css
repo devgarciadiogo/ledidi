@@ -67,6 +67,20 @@ form label{
   width: 30%;
   height: 35px;
 }
+.input-email{
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 25px;
+  width: 30%;
+  height: 35px;
+}
+.input-password{
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 25px;
+  width: 30%;
+  height: 35px;
+}
 
 footer{
   color: #D4AF37;
