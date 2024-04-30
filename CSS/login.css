@@ -3,20 +3,32 @@
     font-family: 'rightland' ;
     src: url(/fonts/Rightland.ttf);
 }
+
+#logoledidi{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.navbar{
+  max-width: 99vw;
+}
+
 .navbar-brand{
     font-family: 'rightland';
     font-size: 30px;
-    padding: 10px 0 0 80px;
-}
+    margin: 0 0 0 50px;
+  }
   
-.nav-item{
+  .nav-item{
     font-weight: 500;
     font-size: 19px;
-}
+    font-family: 'bond'; 
+  }
   
-.nav-link{
+  .nav-link{
     color: black;
-}
+  }
 
 #login-botao{
     color: #D4AF37;
@@ -32,6 +44,7 @@ body {
 }
 
 .page {
+    font-family: 'bond'; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,6 +52,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 80vh;
+    padding: 0 0 0 100px;
     background-color: #000000;
 }
 
@@ -130,7 +144,7 @@ body {
 }
 
 #footer-final{
-    margin: 0 0 0 0;
+    margin:-400px 0 0 0;
     color: #D4AF37;
     text-align: center;
   }

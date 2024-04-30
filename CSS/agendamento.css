@@ -1,22 +1,24 @@
 @font-face {
   font-family: 'rightland' ;
   src: url(/fonts/Rightland.ttf);
+  font-family: 'bond';
+  src: url(/fonts/Bond\ Story.otf);
 }
-  
-#logoledidi{
-  width: 100%;
-  height: auto;
-  display: block;
+
+.navbar{
+  max-width: 99vw;
 }
+
 .navbar-brand{
   font-family: 'rightland';
   font-size: 30px;
-  padding: 10px 0 0 80px;
+  margin: 0 0 0 50px;
 }
   
 .nav-item{
   font-weight: 500;
   font-size: 19px;
+  font-family: 'bond'; 
 }
   
 .nav-link{
@@ -32,6 +34,7 @@ body{
   margin: 0 0 0 0;
   padding: 50px 25px;
   color: #D4AF37;
+  font-family: 'bond';  
 }
   
 form{
@@ -82,64 +85,79 @@ form label{
   height: 35px;
 }
 
-footer{
-  color: #D4AF37;
-}
 
-.div-logo{
-  max-width: 500px;
-  max-height: 200px;
-  margin: 0 0 0 50px;
-  display: flex;
-  flex-direction: column;
-  height: 0;
-  padding: 0 0 0 0;
-}
+  footer{
+    color: #D4AF37;
+    
+  }
 
-.titulos{
-  font-size: 28px;
-}
+  #logo{
+    padding: 0 10rem 0 0;
+  }
   
-.subtitulos{
-  font-size: 20px;
-  color: #a6acaf;
-}
+  .div-logo{
+    max-width: 500px;
+    max-height: 200px;
+    margin: 0 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    padding: 0 5rem 0 0px;
+  }
 
-#coluna-central{
-  padding: 100px 0 0 0;
-}
+  #logo{
+    padding: 50px 10rem 0px 5px;
+  }
+
+  .titulos{
+    font-size: 28px;
+    font-family: 'bond'; 
+  }
   
-#endereco-footer{
-  padding: 0 0 0 55rem;
-}
+  .subtitulos{
+    font-size: 20px;
+    color: #a6acaf;
+    font-family: 'bond'; 
+  }
+
+  #coluna-central{
+    padding: -50px 0 100px 0 ;
+  }
   
-#fc-footer{
-  padding: 0 0 0 55rem;
-}
+  #endereco-footer{
+    margin: 100px 0 0px 40rem;
+    
+  }
   
-#contatos-footer{
-  padding: 0 0 0 55rem;
-}
+  #fc-footer{
+    padding: 20px 0 0 40rem;
+  }
+  
+  #contatos-footer{
+    padding: 20px 0 0 40rem;
+  }
 
-#redes-footer{
-  padding:  0 0 0 90rem;
-  margin-top: -468px;
-}
+  #redes-footer{
+    padding:  0 0 0 75rem;
+    margin-top: -31rem;
+  }
 
-.sociais{
-  max-width: 50px;
-  max-height: 50px;
-}
+  .sociais{
+    max-width: 50px;
+    max-height: 50px; 
+    padding: 0 0 0 0;
+  }
 
-.footer-completo{
-  list-style: none;
-  min-height: 8rem;
-  padding: 0 0 0 0;
-}
+  .footer-completo{
+    list-style: none;
+    min-height: 8rem;
+    padding: 0 0 0 0;
+  }
 
-#footer-final{
-  padding: 450px 0 0 0;
-  color: #D4AF37;
-  text-align: center;
-}
+  #footer-final{
+    padding: 50rem 0 8px 0;
+    color: #D4AF37;
+    text-align: center;
+    font-family: 'bond'; 
+  }
   
