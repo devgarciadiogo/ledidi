@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @font-face {
-  font-family: 'rightland' ;
-  src: url(/fonts/Rightland.ttf);
-  font-family: 'bond';
-  src: url(/fonts/Bond\ Story.otf);
+    font-family: 'rightland';
+    src: url(/fonts/Rightland.ttf);
+}
+
+@font-face {
+    font-family: 'bond';
+    src: url(/fonts/Bond\ Story.otf);
 }
 
 .navbar{
@@ -10,7 +15,7 @@
 }
 
 .navbar-brand{
-  font-family: 'rightland';
+ font-family: 'rightland';
   font-size: 30px;
   margin: 0 0 0 50px;
 }
@@ -23,6 +28,12 @@
   
 .nav-link{
   color: black;
+}
+
+#login-botao{
+  color: #D4AF37;
+  background-color: #000000;
+  border-radius: 10px;
 }
   
 body{
@@ -46,15 +57,7 @@ form label{
   font-size: 20px;
   margin: 0 0 10px 0;
 }
-  
-.input-name {
-  display: block;
-  margin-bottom: 20px;
-  padding: 10px 25px;
-  width: 30%;
-  height: 35px;
-}
-  
+
 .tel-cadastro{
   display: block;
   margin-bottom: 20px;
@@ -70,21 +73,14 @@ form label{
   width: 30%;
   height: 35px;
 }
-.email-cadastro{
-  display: block;
-  margin-bottom: 20px;
-  padding: 10px 25px;
-  width: 30%;
-  height: 35px;
-}
-.senha-cadastro{
-  display: block;
-  margin-bottom: 20px;
-  padding: 10px 25px;
-  width: 30%;
-  height: 35px;
+
+#botao-agendamento{
+  margin: 10px 0 0 0;
 }
 
+#profissional-form{
+  margin: 10px 0 0 0;
+}
 
   footer{
     color: #D4AF37;

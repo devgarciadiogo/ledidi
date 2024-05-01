@@ -43,33 +43,47 @@
       <div class="page container">
         <div class="row">
           <div class="col-sm">
-            <form method="POST" class="formInfo">
+            <form id="formLogin" class="formInfo" method="GET">
               <h1>Login</h1>
               <p>Digite os seus dados de acesso no campo abaixo!</p>
               <label for="email">E-mail</label>
               <input id="emailLogin" type="email" placeholder="Digite seu e-mail" autofocus="true" />
               <label for="password">Senha</label>
               <input id="senhaLogin" type="password" placeholder="Digite sua senha" />
-              <input type="submit" onclick="logar(); return false" value="Acessar" class="btn" />
-            </form>
-          </div>
-          <div class="col-sm">
-            <form method="POST" class="formInfo">
-              <h1>Cadastro</h1>
-              <p>Digite os seus dados de cadastro nos campos abaixo!</p>
-              <label for="email">Nome Completo</label>
-              <input id="nomeCadastro" type="name" placeholder="Digite seu Nome Completo" autofocus="true" />
-              <label for="email">E-mail</label>
-              <input id="emailLogin" type="email" placeholder="Digite seu e-mail" autofocus="true" />
-              <label for="email">E-mail</label>
-              <input id="emailLogin" type="email" placeholder="Digite seu e-mail" autofocus="true" />
-              <label for="password">Senha</label>
-              <input id="senhaLogin" type="password" placeholder="Digite sua senha" />
+              <p>Não tem cadastro? <a href="cadastro.html">Cadastre-se</a></p>
               <input type="submit" onclick="logar(); return false" value="Acessar" class="btn" />
             </form>
           </div>
         </div>
       </div>
     </main>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#formLogin').submit(function(event) {
+          // Verificar se o campo E-mail está vazio
+          if ($('#emailLogin').val().trim() === '') {
+            alert('Por favor, preencha o campo E-mail.');
+            event.preventDefault(); // Impede o envio do formulário
+            return;
+          }
+  
+          // Verificar se o campo Senha está vazio
+          if ($('#senhaLogin').val().trim() === '') {
+            alert('Por favor, preencha o campo Senha.');
+            event.preventDefault(); // Impede o envio do formulário
+            return;
+          }
+  
+          // Simulação de login bem-sucedido
+          alert('Login bem-sucedido! Redirecionando para a página principal.');
+          window.location.href = 'home.html'; // Redirecionamento para a página principal
+  
+          // Evite que o formulário seja enviado normalmente
+          event.preventDefault();
+        });
+      });
+    </script>
   </body>
 </html>

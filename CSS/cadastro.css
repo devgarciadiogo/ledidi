@@ -1,22 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @font-face {
-    font-family: 'rightland' ;
+    font-family: 'rightland';
     src: url(/fonts/Rightland.ttf);
 }
+
+@font-face {
+    font-family: 'bond';
+    src: url(/fonts/Bond\ Story.otf);
+}
+
+#logoledidi{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.navbar{
+  max-width: 99vw;
+}
+
 .navbar-brand{
     font-family: 'rightland';
     font-size: 30px;
-    padding: 10px 0 0 80px;
+    margin: 0 0 0 50px;
+    font-family: 'rightland';
 }
   
-.nav-item{
+  .nav-item{
     font-weight: 500;
     font-size: 19px;
-}
+    font-family: 'bond'; 
+  }
   
-.nav-link{
+  .nav-link{
     color: black;
-}
+  }
 
 #login-botao{
     color: #D4AF37;
@@ -33,6 +52,7 @@ body {
 
 .page {
     display: flex;
+    padding: 0px 0 0 0;
     flex-direction: column;
     align-items: center;
     align-content: center;
@@ -40,6 +60,7 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #000000;
+    font-family: 'bond';
 }
 
 #formCadastro {
@@ -75,6 +96,24 @@ body {
     border-radius: 4px;
     transition: all linear 160ms;
     outline: none;
+}
+
+.btn {
+    background-color: #D4AF37;;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: -10px 0 0 0 !important;
+
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #000000;
+
 }
 
 #formCadastro input:focus {
