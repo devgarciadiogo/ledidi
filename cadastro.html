@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ledidi Coiffeur - Cadastro</title>
+  <link rel="icon" href="/img/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/CSS/cadastro.css">
+  <script src="script.js"></script>
+</head>
+<body>   
+  <header>
+    <img id="logoledidi" src="/img/banner-ledidi.png" alt="Banner Ledidi Coiffeur">
+    <nav class="navbar navbar-expand-lg" style="background-color: #9C6615; background: -webkit-linear-gradient(left, #9C6615, #D4AF37); background: -o-linear-gradient(right, #9C6615, #D4AF37); background: -moz-linear-gradient(right, #9C6615, #D4AF37); background: linear-gradient(to right, #9C6615, #D4AF37);background-color: #9C6615;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">Ledidi</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-flex justfy-content-end" id="#navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="quem-somos.html"><i>QUEM SOMOS</i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="servicos.html"><i>SERVIÇOS</i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="agendamento.html"><i>AGENDAMENTOS</i></a>
+            </li>
+            <li class="nav-item">
+              <a id="login-botao" class="nav-link" href="acesso.html">LOGIN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="page">
+      <form method="POST" id="formCadastro">
+        <h1>Cadastro</h1>
+        <p>Insira as informações solicitadas para realizar seu cadastro!</p>
+        <label for="nome">Nome</label>
+        <input id="nomeCadastro" type="text" placeholder="Digite seu Nome Completo" autofocus="true" />
+        <label for="telefone">
+          Telefone<br />
+          <small>Formato: "(xx) xxxx-xxxx"</small>
+        </label>
+        <input id="telCadastro" type="tel" placeholder="Digite seu Telefone" pattern="([0-9]{2}) [0-9]{5}-[0-9]{4}" required autofocus="true" />
+        <label for="email">E-mail</label>
+        <input id="emailCadastro" type="email" placeholder="Digite seu e-mail" autofocus="true" />
+        <label for="password">Senha</label>
+        <input id="senhaLogin" type="password" placeholder="Digite sua senha" />
+        <input type="submit" onclick="logar(); return false" value="Acessar" class="btn" />
+      </form>
+    </div>
+  </main>
+</body>
+</html>
