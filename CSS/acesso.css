@@ -56,14 +56,14 @@ body {
     background-color: #000000;
 }
 
-.formLogin {
+.formInfo{
     display: flex;
     flex-direction: column;
     background-color: #fff;
     border-radius: 7px;
     padding: 40px;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-    gap: 5px
+    gap: 5px;
 }
 
 .areaLogin img {

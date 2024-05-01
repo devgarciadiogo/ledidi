@@ -33,7 +33,6 @@
 
   body{
     background-color: black;
-    height: 100vh;
     max-width: 100vw;
     overflow-x: hidden;
   }
@@ -67,8 +66,9 @@
 
   .lista-figuras{
     list-style: none;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
     padding: 0 10px 0 10px;
   }
   
@@ -162,15 +162,14 @@
     font-family: 'bond';
   }
   
-  @media screen and (max-width: 500px) {
-    
+@media (max-width: 900px) {
+  body{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+  @media (max-width: 500px) {
     body{
-      float:left;
-      width: 100%;
-      min-width: 200px; 
-      height: auto;
-      text-align: center;
-      margin-bottom: 5px;
-      box-sizing: border-box;
+      grid-template-columns: 1fr;
     }
   }
