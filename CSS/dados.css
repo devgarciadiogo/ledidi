@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: 'rightland';
+    src: url(/fonts/Rightland.ttf);
+}
+
+@font-face {
+    font-family: 'bond';
+    src: url(/fonts/Bond\ Story.otf);
+}
+.navbar{
+    max-width: 99vw;
+}
+  
+  .navbar-brand{
+   font-family: 'rightland';
+    font-size: 30px;
+    margin: 0 0 0 50px;
+}
+    
+  .nav-item{
+    font-weight: 500;
+    font-size: 19px;
+    font-family: 'bond'; 
+}
+    
+  .nav-link{
+    color: black;
+}
+  body{
+    background-color: black;
+    height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+  
+  main{
+    color: #D4AF37;
+    min-height: 50rem;
+    padding: 0 8rem 0 2rem
+}
+footer{
+    color: #D4AF37;
+    
+}
+
+  #logo{
+    padding: 0 10rem 0 0;
+}
+  
+  .div-logo{
+    max-width: 500px;
+    max-height: 200px;
+    margin: 0 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    padding: 0 5rem 0 0px;
+}
+
+  #logo{
+    padding: 50px 10rem 0px 5px;
+}
+
+  .titulos{
+    font-size: 28px;
+    font-family: 'bond'; 
+}
+  
+  .subtitulos{
+    font-size: 20px;
+    color: #a6acaf;
+    font-family: 'bond'; 
+}
+
+  #coluna-central{
+    padding: -50px 0 100px 0 ;
+}
+  
+  #endereco-footer{
+    margin: 100px 0 0px 40rem;
+    
+}
+  
+  #fc-footer{
+    padding: 20px 0 0 40rem;
+}
+  
+  #contatos-footer{
+    padding: 20px 0 0 40rem;
+}
+
+  #redes-footer{
+    padding:  0 0 0 75rem;
+    margin-top: -31rem;
+}
+
+  .sociais{
+    max-width: 50px;
+    max-height: 50px; 
+    padding: 0 0 0 0;
+}
+
+  .footer-completo{
+    list-style: none;
+    min-height: 3rem;
+    padding: 0 0 0 0;
+}
+
+  #footer-final{
+    padding: 50rem 0 8px 0;
+    color: #D4AF37;
+    text-align: center;
+    font-family: 'bond'; 
+}
+  
