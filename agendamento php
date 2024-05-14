@@ -1,0 +1,34 @@
+<?php
+// Conexão com o banco de dados
+$conn = pg_connect("host=localhost dbname=seu_banco_de_dados user=seu_usuario password=sua_senha");
+
+// Verifica se a conexão foi estabelecida com sucesso
+if (!$conn) {
+  echo "Erro de conexão.";
+  exit;
+}
+
+// Recebe os dados do formulário
+$telefone = pg_escape_string($_POST['telefone']);
+$dataHora = pg_escape_string($_POST['dataHora']);
+$servico = pg_escape_string($_POST['servico']);
+$profissional = pg_escape_string($_POST['profissional']);
+
+// Query para inserir os dados do agendamento no banco de dados
+$query = "INSERT INTO agendamentos (telefone, data_hora, servico, profissional) VALUES ('$telefone', '$dataHora', '$servico', '$profissional')";
+
+// Executa a query
+$result = pg_query($conn, $query);
+
+// Verifica se a query foi executada com sucesso
+if ($result) {
+  // Retorna uma resposta em JSON indicando sucesso
+  echo json_encode(array("mensagem" => "Agendamento realizado com sucesso!"));
+} else {
+  // Retorna uma resposta em JSON indicando erro
+  echo json_encode(array("mensagem" => "Erro ao agendar."));
+}
+
+// Fecha a conexão com o banco de dados
+pg_close($conn);
+?>

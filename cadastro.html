@@ -39,7 +39,7 @@
   </header>
   <main>
     <div class="page">
-      <form method="POST" id="formCadastro">
+      <form method="POST" action="cadastro.php" id="formCadastro">
         <h1>Cadastro</h1>
         <p>Insira as informações solicitadas para realizar seu cadastro!</p>
         <label for="nome">Nome</label>
@@ -100,7 +100,7 @@
   </script>
   <script>
     $(document).ready(function() {
-      $('#botaoRequisicao').click(async function() {
+      $('botaoRequisicao').click(async function() {
         dados = {
           nome: $('#nomeCadastro').val(),
           telefone: $('#telCadastro').val(),
@@ -108,14 +108,15 @@
           senha: $('#senhaLogin').val(),
         }
         $.ajax({
-          url: 'http://localhost/projeto/index.php', method: 'GET',
+          url: 'http://localhost/projeto/index.php', 
+          method: 'GET',
           data: dados,
           dataType: 'json',
           success: function(response) {
+            alert(response.mensagem);
           },
-          alert(response.mensagem);
           error: function(xhr, status, error) {
-          console.error('Erro na requisição:', xhr, status, error);
+            console.error('Erro na requisição:', xhr, status, error);
           }
       });
       });
