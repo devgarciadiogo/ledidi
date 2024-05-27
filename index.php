@@ -22,7 +22,7 @@ $db_context->conectar();
 //CONDIÇÃO PARA ADICIONAR UM NOVO ALUNO
 
 if ($tipo == 1) {
-    if(isset($_GET['nome'] && isset($_GET['matricula'])) {
+    if(isset($_GET['nome'] && isset($_GET['matricula']))) {
         
         $nome = $_GET['nome'];
         $matricula = $_GET['matricula'];

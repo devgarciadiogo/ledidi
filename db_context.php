@@ -51,29 +51,32 @@ class DbContext {
         return json_encode($resultado);
     }
 
-    public function adicionar($nome, $matricula) {
-        $query = "INSERT INTO alunos(nome, matricula) VALUES ('"
+    public function adicionar($nome, $telefone, $email, $senha) {
+        $query = "INSERT INTO clientes(nome, telefone, email, senha) VALUES ('"
         . $this->conexao->real_escape_string($nome) . "','"
-        . $this->conexao->real_escape_string($matricula) . "')";
-
+        . $this->conexao->real_escape_string($telefone) . "','"
+        . $this->conexao->real_escape_string($email) . "','"
+        . $this->conexao->real_escape_string($senha) . "')";
+    
         return $this->executar_query_sql($query);
     }
 
     public function consultar(){
-        $query = "SELECT * FROM alunos ORDER BY id";
+        $query = "SELECT * FROM clientes ORDER BY id";
         return $this->executar_query_sql($query);
     }
-
-    public function atualizar($id, $nome, $matricula) {
-        $query = "UPDATE alunos SET nome = '"
-        . $this->conexao->real_escape_string($nome) . "', matricula = '"
-        . $this->conexao->real_escape_string($matricula) . "'" . " WHERE id = " . $id;
-
+    public function atualizar($id, $nome, $telefone, $email, $senha) {
+        $query = "UPDATE clientes SET nome = '"
+        . $this->conexao->real_escape_string($nome) . "', telefone = '"
+        . $this->conexao->real_escape_string($telefone) . "', email = '"
+        . $this->conexao->real_escape_string($email) . "', senha = '"
+        . $this->conexao->real_escape_string($senha) . "' WHERE id = " . $id;
+    
         return $this->executar_query_sql($query);
     }
 
     public function deletar($id){
-        $query = "DELETE FROM alunos WHERE id = " . $id;
+        $query = "DELETE FROM clientes WHERE id = " . $id;
         return $this->executar_query_sql($query);
     }
 }
