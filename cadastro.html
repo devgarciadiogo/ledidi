@@ -53,11 +53,10 @@
         <input id="emailCadastro" type="email" placeholder="Digite seu e-mail" autofocus="true" />
         <label for="password">Senha</label>
         <input id="senhaCadastro" type="password" placeholder="Digite sua senha" />
-        <input id="cadastro" type="submit" value="Acessar" class="btn" />
+        <input id="cadastro" type="submit" value="Cadastrar" class="btn" />
       </form>
     </div>
   </main>
-  <script src="script.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function() {
@@ -84,42 +83,34 @@
         }
   
         // Verificar se o campo Senha está vazio
-        if ($('#senhaLogin').val().trim() === '') {
+        if ($('#senhaCadastro').val().trim() === '') {
           alert('Por favor, preencha o campo Senha.');
           event.preventDefault(); // Impede o envio do formulário
           return;
         }
   
-        // Se todas as verificações passarem, redirecione o usuário para a página principal
-        alert('Cadastro bem-sucedido! Redirecionando para a página principal.');
-        window.location.href = 'index.html';
-  
         // Evite que o formulário seja enviado normalmente
         event.preventDefault();
-      });
-    });
-  </script>
-  <script>
-    $(document).ready(function() {
-      $('botaoRequisicao').click(async function() {
-        dados = {
-          nome: $('#nomeCadastro').val(),
-          telefone: $('#telCadastro').val(),
-          email: $('#emailCadastro').val(),
-          senha: $('#senhaLogin').val(),
-        }
+
+        // Envie os dados do formulário via AJAX
         $.ajax({
           url: 'http://localhost/projeto/index.php', 
           method: 'GET',
-          data: dados,
+          data: {
+            nome: $('#nomeCadastro').val(),
+            telefone: $('#telCadastro').val(),
+            email: $('#emailCadastro').val(),
+            senha: $('#senhaCadastro').val()
+          },
           dataType: 'json',
           success: function(response) {
+            // Exibir mensagem de sucesso ou erro
             alert(response.mensagem);
           },
           error: function(xhr, status, error) {
             console.error('Erro na requisição:', xhr, status, error);
           }
-      });
+        });
       });
     });
   </script>
