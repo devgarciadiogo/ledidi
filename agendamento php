@@ -1,24 +1,24 @@
 <?php
 // Conexão com o banco de dados
-$conn = pg_connect("host=localhost dbname=seu_banco_de_dados user=seu_usuario password=sua_senha");
+$conn = mysqli_connect("localhost", "root", "", "ledidi_db");
 
 // Verifica se a conexão foi estabelecida com sucesso
 if (!$conn) {
-  echo "Erro de conexão.";
+  echo "Erro de conexão: " . mysqli_connect_error();
   exit;
 }
 
 // Recebe os dados do formulário
-$telefone = pg_escape_string($_POST['telefone']);
-$dataHora = pg_escape_string($_POST['dataHora']);
-$servico = pg_escape_string($_POST['servico']);
-$profissional = pg_escape_string($_POST['profissional']);
+$telefone = mysqli_real_escape_string($conn, $_POST['telefone']);
+$dataHora = mysqli_real_escape_string($conn, $_POST['dataHora']);
+$servico = mysqli_real_escape_string($conn, $_POST['servico']);
+$profissional = mysqli_real_escape_string($conn, $_POST['profissional']);
 
 // Query para inserir os dados do agendamento no banco de dados
 $query = "INSERT INTO agendamentos (telefone, data_hora, servico, profissional) VALUES ('$telefone', '$dataHora', '$servico', '$profissional')";
 
 // Executa a query
-$result = pg_query($conn, $query);
+$result = mysqli_query($conn, $query);
 
 // Verifica se a query foi executada com sucesso
 if ($result) {
@@ -26,9 +26,9 @@ if ($result) {
   echo json_encode(array("mensagem" => "Agendamento realizado com sucesso!"));
 } else {
   // Retorna uma resposta em JSON indicando erro
-  echo json_encode(array("mensagem" => "Erro ao agendar."));
+  echo json_encode(array("mensagem" => "Erro ao agendar: " . mysqli_error($conn)));
 }
 
 // Fecha a conexão com o banco de dados
-pg_close($conn);
+mysqli_close($conn);
 ?>

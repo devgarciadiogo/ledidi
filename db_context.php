@@ -8,7 +8,6 @@ class DbContext {
     private $dbname;
     private $usuario;
     private $senha;
-
     private $conexao;
 
     public function __construct(){
@@ -39,38 +38,43 @@ class DbContext {
             return json_encode($error);
         }
 
-        if($resultado->num_rows > 0){
+        if ($resultado->num_rows > 0) {
             $linhas = array();
-            while ($linha = $resultado->fetch_assoc()){
+            while ($linha = $resultado ->fetch_assoc()) {
                 $linhas[] = $linha;
-            }
-
-            return json_encode($linhas);
         }
-        
-        return json_encode($resultado);
+        return json_encode ($linhas);
+    }
+    return json_encode($resultado);
     }
 
     public function adicionar($nome, $telefone, $email, $senha) {
         $query = "INSERT INTO clientes(nome, telefone, email, senha) VALUES ('"
-        . $this->conexao->real_escape_string($nome) . "','"
-        . $this->conexao->real_escape_string($telefone) . "','"
-        . $this->conexao->real_escape_string($email) . "','"
-        . $this->conexao->real_escape_string($senha) . "')";
-    
-        return $this->executar_query_sql($query);
+            . $this->conexao->real_escape_string($nome) . "','"
+            . $this->conexao->real_escape_string($telefone) . "','"
+            . $this->conexao->real_escape_string($email) . "','"
+            . $this->conexao->real_escape_string($senha) . "')";
+        
+        if ($this->conexao->query($query) === TRUE) {
+            return $this->conexao->insert_id; 
+        } else {
+            $error = array('error' => $this->conexao->error);
+            return json_encode($error);
+        }
     }
+    
 
     public function consultar(){
         $query = "SELECT * FROM clientes ORDER BY id";
         return $this->executar_query_sql($query);
     }
+
     public function atualizar($id, $nome, $telefone, $email, $senha) {
         $query = "UPDATE clientes SET nome = '"
-        . $this->conexao->real_escape_string($nome) . "', telefone = '"
-        . $this->conexao->real_escape_string($telefone) . "', email = '"
-        . $this->conexao->real_escape_string($email) . "', senha = '"
-        . $this->conexao->real_escape_string($senha) . "' WHERE id = " . $id;
+            . $this->conexao->real_escape_string($nome) . "', nome = '"
+            . $this->conexao->real_escape_string($telefone) . "', telefone = '"
+            . $this->conexao->real_escape_string($email) . "', email = '"
+            . $this->conexao->real_escape_string($senha) . "' senha = '";
     
         return $this->executar_query_sql($query);
     }
@@ -80,3 +84,4 @@ class DbContext {
         return $this->executar_query_sql($query);
     }
 }
+?>
