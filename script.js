@@ -1,10 +1,10 @@
-    document.getElementById('cadastro').addEventListener('click', function() {
+   /* document.getElementById('cadastro').addEventListener('click', function() {
         var nome = document.getElementById('nomeCadastro').value;
         var telefone = document.getElementById('telCadastro').value;
         var email = document.getElementById('emailCadastro').value;
         var senha = document.getElementById('senhaCadastro').value;
         fazerRequisicao(1, undefined, nome, telefone, email, senha);
-            window.location.href = 'dados.html';
+            window.location.href = 'acesso.html';
         fazerRequisicao(2, undefined, undefined, undefined, undefined, undefined);
     });
         
@@ -31,7 +31,7 @@
     });
 
     function fazerRequisicao(tipo, id, nome, telefone, email, senha){
-        var url = `http://localhost/ledidi/index.php=${tipo}&`
+        var url = `http://localhost/ledidi/index.php?tipo=${tipo}&`
 
         if (id != undefined){
             url += `id=${id}&`;
@@ -89,13 +89,13 @@
             console.log(error);
         });
 
-        document.getElementsById('id').value = "";
-        document.getElementsById('#nomeCadastro').value = "";
-        document.getElementsById('#telCadastro').value = "";
-        document.getElementsById('#emailCadastro').value = "";
-        document.getElementsById('#senhaCadastro').value = "";
+        document.getElementById('id').value = "";
+        document.getElementById('nomeCadastro').value = "";
+        document.getElementById('telCadastro').value = "";
+        document.getElementById('emailCadastro').value = "";
+        document.getElementById('senhaCadastro').value = "";
     
-    }
+    }*/
 
 
 
@@ -127,7 +127,7 @@
 
 
 
-    /*$(document).ready(function() {
+    $(document).ready(function() {
         $('#formCadastro').submit(function(event) {
             event.preventDefault(); // Impede o envio do formulário
 
@@ -157,7 +157,7 @@
                     if (response.success) {
                         alert(response.message || 'Cliente adicionado com sucesso');
                         // Redirecionar para dados.html após o cadastro bem-sucedido
-                        window.location.href = 'dados.html';
+                        window.location.href = 'acesso.html';
                     } 
                 },
                 error: function(xhr, status, error) {
@@ -166,4 +166,4 @@
                 }
             });
         });
-    });*/
+    });
