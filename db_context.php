@@ -48,10 +48,9 @@ class DbContext {
     return json_encode($resultado);
     }
 
-    public function adicionar($nome, $telefone, $email, $senha) {
-        $query = "INSERT INTO clientes(nome, telefone, email, senha) VALUES ('"
+    public function adicionar($nome, $email, $senha) {
+        $query = "INSERT INTO clientes(nome, email, senha) VALUES ('"
             . $this->conexao->real_escape_string($nome) . "','"
-            . $this->conexao->real_escape_string($telefone) . "','"
             . $this->conexao->real_escape_string($email) . "','"
             . $this->conexao->real_escape_string($senha) . "')";
         
@@ -69,10 +68,9 @@ class DbContext {
         return $this->executar_query_sql($query);
     }
 
-    public function atualizar($id, $nome, $telefone, $email, $senha) {
+    public function atualizar($id, $nome, $email, $senha) {
         $query = "UPDATE clientes SET nome = '"
             . $this->conexao->real_escape_string($nome) . "', nome = '"
-            . $this->conexao->real_escape_string($telefone) . "', telefone = '"
             . $this->conexao->real_escape_string($email) . "', email = '"
             . $this->conexao->real_escape_string($senha) . "' senha = '";
     

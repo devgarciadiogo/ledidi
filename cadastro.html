@@ -39,16 +39,11 @@
   </header>
   <main>
     <div class="page">
-      <form method="POST" action="cadastro.php" id="formCadastro">
+      <form method="GET" action="cadastro.php" id="formCadastro">
         <h1>Cadastro</h1>
         <p>Insira as informações solicitadas para realizar seu cadastro!</p>
         <label for="nome">Nome</label>
         <input id="nomeCadastro" type="text" placeholder="Digite seu Nome Completo" autofocus="true" />
-        <label for="telefone">
-          Telefone<br>
-          <small>Formato: "xx xxxxx-xxxx"</small>
-        </label>
-        <input id="telCadastro" type="tel" placeholder="Digite seu Telefone" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" required autofocus="true" />
         <label for="email">E-mail</label>
         <input id="emailCadastro" type="email" placeholder="Digite seu e-mail" autofocus="true" />
         <label for="password">Senha</label>
@@ -65,13 +60,6 @@
         // Verificar se o campo Nome está vazio
         if ($('#nomeCadastro').val().trim() === '') {
           alert('Por favor, preencha o campo Nome.');
-          event.preventDefault(); // Impede o envio do formulário
-          return;
-        }
-  
-        // Verificar se o campo Telefone está vazio
-        if ($('#telCadastro').val().trim() === '') {
-          alert('Por favor, preencha o campo Telefone.');
           event.preventDefault(); // Impede o envio do formulário
           return;
         }
@@ -95,17 +83,21 @@
 
         // Envie os dados do formulário via AJAX
         $.ajax({
-          url: 'http://localhost/ledidi/index.php', 
+          url: 'http://localhost:80/ledidi/index.php', 
           method: 'GET',
           data: {
-            tipo: 1, //botei isso aqui para testar, isso é para adicionaaaaaaaaaaaaaaaaaaaaaaaaaaaaaar ok?
+            tipo: 1,
             nome: $('#nomeCadastro').val(),
-            telefone: $('#telCadastro').val(),
             email: $('#emailCadastro').val(),
             senha: $('#senhaCadastro').val()
           },
           dataType: 'json',
           success: function(response) {
+            if (response.success) {
+                alert(response.message || 'Cliente adicionado com sucesso');
+                // Redirecionar para dados.html após o cadastro bem-sucedido
+                window.location.href = 'acesso.html';
+            }
           },
           error: function(xhr, status, error) {
             console.error('Erro na requisição:', xhr, status, error);     

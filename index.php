@@ -1,6 +1,7 @@
 <?php
 
 header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: *");
 
 require_once('db_context.php');
 
@@ -19,22 +20,20 @@ $db_context->conectar();
 
 // CONDIÇÃO PARA ADICIONAR UM NOVO CLIENTE
 if ($tipo == 1) {
-    if (isset($_GET['nome']) && isset($_GET['telefone']) && isset($_GET['email']) && isset($_GET['senha'])) {
+    if (isset($_GET['nome']) && isset($_GET['email']) && isset($_GET['senha'])) {
         
         $nome = $_GET['nome'];
-        $telefone = $_GET['telefone'];
         $email = $_GET['email'];
         $senha = $_GET['senha'];
 
-        $resultado = $db_context->adicionar($nome, $telefone, $email, $senha);
+        $resultado = $db_context->adicionar($nome, $email, $senha);
         if ($resultado) {
-            // Assuming $resultado returns the new customer ID
             echo json_encode(array('success' => true, 'id' => $resultado));
         } else {
             echo json_encode(array('success' => false, 'message' => 'Falha ao adicionar cliente'));
         }
     } else {
-        $error = array('error' => 'Parâmetro NOME, TELEFONE, EMAIL ou SENHA não indicado na requisição');
+        $error = array('error' => 'Parâmetro NOME, EMAIL ou SENHA não indicado na requisição');
         echo json_encode($error);
     }
 }
@@ -46,19 +45,18 @@ else if ($tipo == 2) {
 } 
 // CONDIÇÃO PARA EDITAR UM CLIENTE
 else if ($tipo == 3) {
-    if (isset($_GET['id']) && isset($_GET['nome']) && isset($_GET['telefone']) && isset($_GET['email']) && isset($_GET['senha'])) {
+    if (isset($_GET['id']) && isset($_GET['nome']) && isset($_GET['email']) && isset($_GET['senha'])) {
         
         $id = $_GET['id'];
         $nome = $_GET['nome'];
-        $telefone = $_GET['telefone'];
         $email = $_GET['email'];
         $senha = $_GET['senha'];
 
-        $resultado = $db_context->atualizar($id, $nome, $telefone, $email, $senha);
+        $resultado = $db_context->atualizar($id, $nome, $email, $senha);
         echo $resultado;
 
     } else {
-        $error = array('error' => 'Parâmetro ID, NOME, TELEFONE, EMAIL ou SENHA não indicado na requisição');
+        $error = array('error' => 'Parâmetro ID, NOME, EMAIL ou SENHA não indicado na requisição');
         echo json_encode($error);
     }
 } 
@@ -78,5 +76,3 @@ else if ($tipo == 4) {
 }
 
 $db_context->desconectar();
-
-?>
