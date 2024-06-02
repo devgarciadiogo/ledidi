@@ -38,25 +38,53 @@
       </div>
     </nav>
   </header>
-    <main>
-      <div class="page container">
-        <div class="row">
-          <div class="col-sm">
-            <form method="POST" action="dados.html" id="formLogin" class="formInfo">
-              <h1>Login</h1>
-              <p>Digite os seus dados de acesso no campo abaixo!</p>
-              <label for="email">E-mail</label>
-              <input id="emailLogin" type="email" name="email" placeholder="Digite seu e-mail" autofocus="true" />
-              <label for="password">Senha</label>
-              <input id="senhaLogin" type="password" name="senha" placeholder="Digite sua senha" />
-              <p>Não tem cadastro? <a href="cadastro.html">Cadastre-se</a></p>
-              <input type="submit" value="Acessar" class="btn" />
-            </form>
-          </div>
+  <main>
+    <div class="page container">
+      <div class="row">
+        <div class="col-sm">
+          <form method="POST" id="formLogin" class="formInfo">
+            <h1>Login</h1>
+            <p>Digite os seus dados de acesso no campo abaixo!</p>
+            <label for="email">E-mail</label>
+            <input id="emailLogin" type="email" name="email" placeholder="Digite seu e-mail" autofocus="true" />
+            <label for="password">Senha</label>
+            <input id="senhaLogin" type="password" name="senha" placeholder="Digite sua senha" />
+            <p>Não tem cadastro? <a href="cadastro.html">Cadastre-se</a></p>
+            <input id="acessar" type="submit" value="Acessar" class="btn" />
+          </form>
         </div>
       </div>
-    </main>
-    <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  </body>
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#formLogin').submit(function(event) {
+        // Evite que o formulário seja enviado normalmente
+        event.preventDefault();
+
+        // Envie os dados do formulário via AJAX
+        $.ajax({
+          url: 'http://localhost:80/ledidi/acesso.php', 
+          method: 'POST',
+          data: {
+            email: $('#emailLogin').val(),
+            senha: $('#senhaLogin').val(),
+          },
+          dataType: 'json',
+          success: function(response) {
+            if (response.success) {
+                alert(response.message || 'Login feito com sucesso!');
+                // Redirecionar para dados.html após o cadastro bem-sucedido
+                window.location.href = 'dados.html';
+            }
+          },
+          error: function(xhr, status, error) {
+            console.error('Erro na requisição:', xhr, status, error);     
+          }
+        });
+      });
+    });
+  </script>
+</body>
 </html>

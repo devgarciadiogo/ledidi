@@ -4,7 +4,6 @@
         var senha = document.getElementById('senhaCadastro').value;
         fazerRequisicao(1, undefined, nome, email, senha);
         fazerRequisicao(2, undefined, undefined, undefined, undefined);
-        window.location.href = 'acesso.html';
     });
         
     document.getElementById('listar').addEventListener('click', function() {
@@ -28,7 +27,7 @@
         fazerRequisicao(2, undefined, undefined, undefined, undefined)
     });
 
-    function fazerRequisicao(tipo, id, nome, telefone, email, senha){
+    function fazerRequisicao(tipo, id, nome, email, senha){
         var url = `http://localhost/ledidi/index.php?tipo=${tipo}&`
 
         if (id != undefined){
@@ -84,9 +83,9 @@
         });
 
         document.getElementById('id').value = "";
-        document.getElementById('#nomeCadastro').value = "";
-        document.getElementById('#emailCadastro').value = "";
-        document.getElementById('#senhaCadastro').value = "";
+        document.getElementById('nomeCadastro').value = "";
+        document.getElementById('emailCadastro').value = "";
+        document.getElementById('senhaCadastro').value = "";
     }
 
 
