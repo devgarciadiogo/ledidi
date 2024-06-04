@@ -61,6 +61,20 @@ class DbContext {
             return json_encode($error);
         }
     }
+    public function adicionar_agendamento($telefone, $dataHora, $serviços, $funcionarios) {
+        $query = "INSERT INTO agendamentos(telefone, data_hora, serviço, profissional) VALUES ('"
+            . $this->conexao->real_escape_string($telefone) . "','"
+            . $this->conexao->real_escape_string($dataHora) . "','"
+            . $this->conexao->real_escape_string($serviços) . "','"
+            . $this->conexao->real_escape_string($funcionarios) . "')";
+        
+        if ($this->conexao->query($query) === TRUE) {
+            return $this->conexao->insert_id; 
+        } else {
+            $error = array('error' => $this->conexao->error);
+            return json_encode($error);
+        }
+    }
     
 
     public function consultar(){

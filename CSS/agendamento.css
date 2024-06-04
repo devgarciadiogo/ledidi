@@ -58,7 +58,7 @@ form label{
   margin: 0 0 10px 0;
 }
 
-.tel-cadastro{
+#Telefone-Cadastro{
   display: block;
   margin-bottom: 20px;
   padding: 10px 25px;
@@ -66,7 +66,7 @@ form label{
   height: 35px;
 }
   
-.date-cadastro{
+#Date-Cadastro{
   display: block;
   margin-bottom: 20px;
   padding: 10px 25px;
@@ -74,7 +74,7 @@ form label{
   height: 35px;
 }
 
-#botao-agendamento{
+#agendar{
   margin: 10px 0 0 0;
 }
 

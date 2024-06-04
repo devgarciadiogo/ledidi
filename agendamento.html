@@ -2,116 +2,140 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ledidi Coiffeur - Agendamento</title>
   <link rel="icon" href="/img/logo.png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="CSS/agendamento.css">
-  </head>
 </head>
 <body>
-    <header>
-      <nav class="navbar navbar-expand-lg" style="background-color: #9C6615; background: -webkit-linear-gradient(left, #9C6615, #D4AF37); background: -o-linear-gradient(right, #9C6615, #D4AF37); background: -moz-linear-gradient(right, #9C6615, #D4AF37); background: linear-gradient(to right, #9C6615, #D4AF37);background-color: #9C6615;">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Ledidi</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-lg-flex justfy-content-end" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="quem-somos.html">QUEM SOMOS</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="servicos.html">SERVIÇOS</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="agendamento.html">AGENDAMENTOS</a>
-                </li>
-                <li class="nav-item">
-                  <a id="login-botao" class="nav-link" href="acesso.html">LOGIN</a>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-
-      <main>
-        <div id="agendamento">
-            <form method="POST" action="agendamento php" id="form-agendamento">
-              <h2>AGENDAMENTO</h2>
-              <div class="secao-form">
-                <label for="form-agendamento">Telefone</label>
-                <input class="tel-cadastro" type="tel" aria-describedby="telHelp" placeholder="Insira seu telefone (sem DDD)">
-              </div>
-              <div class="secao-form">
-                <label for="form-agendamento">Data e Hora</label>
-                <input class="date-cadastro" type="datetime-local" aria-describedby="dateHelp">
-              </div>
-              <div class="secao-form">
-                <label id="servicos-form" for="serviços">Escolha seu serviço:</label>
-                <select name="servicos" id="salao">
-                  <option value="Selecione">--Selecione--</option>
-                  <option value="Tratamentos Capilares">Tratamentos Capilares</option>
-                  <option value="Manicure">Manicure</option>
-                  <option value="Pedicure">Pedicure</option>
-                </select>
-              </div>
-              <div id="profissional-form">
-                <label for="funcionarios">Escolha o profissional:</label>
-                <select name="servicos" id="profissional">
-                  <option value="Selecione">--Selecione--</option>
-                  <option value="Joasiane">Josiane Santos</option>
-                  <option value="RenatO">Renato Seixas</option>
-                  <option value="Patricia">Patricia Moura</option>
-                </select>
-              </div>
-              <button type="button" id="botao-agendamento" class="btn btn-warning">Agendar</button>
-            </form>
-          </div>
-      </main>
-      
-      <footer>
-        <hr>
-        <div class="div-logo">
-          <img id="logo" src="img/logo.png" alt="Logo">
-          <p class="titulos"><i>"Sua beleza é nossa responsabilidade"</i></p>
-          <p class="subtitulos">Indo para qualquer uma de nossas unidades você será envolta(o) em um ambiente tranquilo e proativo, por um preço justo e orçamentos gratuitos!</p>
-        </div>     
-        
-        <div id="coluna-central">
-          <ul>
-            <li id="endereco-footer" class="footer-completo">
-              <p class="titulos">Endereços</p>
-              <p class="subtitulos">Rua Silvio Romero, 293<br>Rua Engenheiro Bernado Sayão, 27<br>Rua Jaraguá, 333<br>Alcantara | São Gonçalo - RJ</p>
-            </li>
-            <li id="fc-footer" class="footer-completo">
-              <p class="titulos">Fale conosco</p>
-              <p class="subtitulos">Whatsapp: (21) 98989-5568<br>Telefone: (21) 2223-5756</p>
-            </li>
-            <li id="contatos-footer" class="footer-completo">
-              <p class="titulos">Sugestões e Agradecimentos</p>
-              <p class="subtitulos">E-mail: ledidicoiffeur@gmail.com</p>
-            </li>
+  <header>
+    <nav class="navbar navbar-expand-lg" style="background-color: #9C6615; background: linear-gradient(to right, #9C6615, #D4AF37);">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Ledidi</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="quem-somos.html">QUEM SOMOS</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicos.html">SERVIÇOS</a></li>
+            <li class="nav-item"><a class="nav-link" href="agendamento.html">AGENDAMENTOS</a></li>
+            <li class="nav-item"><a id="login-botao" class="nav-link" href="acesso.html">LOGIN</a></li>
           </ul>
-         </div>
-        
-         <div id="redes-footer" class="footer-completo">  
-          <p class="titulos">Redes sociais</p>
-          <a class="icon-link" href="#">
-            <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
-            <img class="sociais" src="img/facebook-color-svgrepo-com.svg" alt="Logo do Facebook">
-            <img class="sociais" src="img/instagram-1-svgrepo-com.svg" alt="Logo do Instagram">
-          </a>
-        </div> 
-      </footer>  
-      
-      <footer id="footer-final">
-        <div>
-          <hr>
-          <p>&copy;2024 LEDIDI COIFFEUR | Desenvolvido por Dillan, Diogo e Leonardo</p>
         </div>
-      </footer>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div id="agendamento">
+      <form method="GET" id="form-agendamento">
+        <h2>AGENDAMENTO</h2>
+        <div class="secao-form">
+          <label for="Telefone-Cadastro">Telefone</label>
+          <input id="Telefone-Cadastro" name="telefone" type="tel" placeholder="Insira seu telefone (sem DDD)">
+        </div>
+        <div class="secao-form">
+          <label for="Date-Cadastro">Data e Hora</label>
+          <input id="Date-Cadastro" name="dataHora" type="datetime-local">
+        </div>
+        <div class="secao-form">
+          <label for="salao">Escolha seu serviço:</label>
+          <select name="servicos" id="salao">
+            <option value="Selecione">--Selecione--</option>
+            <option value="Tratamentos Capilares">Tratamentos Capilares</option>
+            <option value="Manicure">Manicure</option>
+            <option value="Pedicure">Pedicure</option>
+          </select>
+        </div>
+        <div id="profissional-form">
+          <label for="profissional">Escolha o profissional:</label>
+          <select name="funcionarios" id="profissional">
+            <option value="Selecione">--Selecione--</option>
+            <option value="Josiane">Josiane Santos</option>
+            <option value="Renato">Renato Seixas</option>
+            <option value="Patricia">Patricia Moura</option>
+          </select>
+        </div>
+        <input id="agendar" type="submit" value="Agendar" class="btn btn-warning">
+      </form>
+    </div>
+  </main>
+  <footer>
+    <hr>
+    <div class="div-logo">
+      <img id="logo" src="img/logo.png" alt="Logo">
+      <p class="titulos"><i>"Sua beleza é nossa responsabilidade"</i></p>
+      <p class="subtitulos">Indo para qualquer uma de nossas unidades você será envolta(o) em um ambiente tranquilo e proativo, por um preço justo e orçamentos gratuitos!</p>
+    </div>
+    <div id="coluna-central">
+      <ul>
+        <li id="endereco-footer" class="footer-completo">
+          <p class="titulos">Endereços</p>
+          <p class="subtitulos">Rua Silvio Romero, 293<br>Rua Engenheiro Bernado Sayão, 27<br>Rua Jaraguá, 333<br>Alcantara | São Gonçalo - RJ</p>
+        </li>
+        <li id="fc-footer" class="footer-completo">
+          <p class="titulos">Fale conosco</p>
+          <p class="subtitulos">Whatsapp: (21) 98989-5568<br>Telefone: (21) 2223-5756</p>
+        </li>
+        <li id="contatos-footer" class="footer-completo">
+          <p class="titulos">Sugestões e Agradecimentos</p>
+          <p class="subtitulos">E-mail: ledidicoiffeur@gmail.com</p>
+        </li>
+      </ul>
+    </div>
+    <div id="redes-footer" class="footer-completo">  
+      <p class="titulos">Redes sociais</p>
+      <a class="icon-link" href="#">
+        <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
+        <img class="sociais" src="img/facebook-color-svgrepo-com.svg" alt="Logo do Facebook">
+        <img class="sociais" src="img/instagram-1-svgrepo-com.svg" alt="Logo do Instagram">
+      </a>
+    </div>
+  </footer>
+  <footer id="footer-final">
+    <div>
+      <hr>
+      <p>&copy;2024 LEDIDI COIFFEUR | Desenvolvido por Dillan, Diogo e Leonardo</p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#form-agendamento').submit(function(event) {
+        // Evite que o formulário seja enviado normalmente
+        event.preventDefault();
+
+        // Envie os dados do formulário via AJAX
+        $.ajax({
+          url: 'http://localhost:80/ledidi/agendamento.php', 
+          method: 'GET',
+          data: {
+            tipo: 1,
+            telefone: $("#Telefone-Cadastro").val(),
+            dataHora: $("#Date-Cadastro").val(),
+            servicos: $("#salao").val(),
+            funcionarios: $("#profissional").val()
+          },
+          dataType: 'json',
+          success: function(response) {
+            console.log(response);
+            if (response.success) {
+                alert(response.message || 'Agendamento feito com sucesso');
+                // Redirecionar para index.html após o cadastro bem-sucedido
+                window.location.href = 'index.html';
+            } else {
+              alert(response.message || 'Falha ao adicionar agendamento');
+            }
+          },
+          error: function(xhr, status, error) {
+            console.error('Erro na requisição:', xhr, status, error);
+            alert('Erro ao tentar realizar o agendamento');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
