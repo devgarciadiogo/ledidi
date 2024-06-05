@@ -20,7 +20,7 @@
                 <div class="collapse navbar-collapse d-lg-flex justfy-content-end" id="#navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="quemsomos.html">QUEM SOMOS</a>
+                        <a class="nav-link active" aria-current="page" href="quem-somos.html">QUEM SOMOS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="servicos.html">SERVIÇOS</a>
@@ -39,9 +39,12 @@
                     <h3>MEUS DADOS</h3>
                     <div>
                         <h4>Listar Dados</h4>
-                        <label for="email">Email:</label>
+                        <label id="email-dados" for="email">Email:</label>
                         <input id="email" type="text">
-                        <button id="listar" class="btn btn-outline-warning">Listar</button>
+                        
+                        <div>
+                                <button id="listar" class="btn btn-outline-warning">Listar</button>
+                        </div>
                                     
                         <table border="1" class="table-bordered border-warning">
                             <thead>
@@ -58,32 +61,39 @@
                         </table>
                     </div>
 
-                    <div>
-                        <h4>Atualizar Dados</h4>
+                    <div class="dados">
+                        <h4 id="atualizar-dados">Atualizar Dados</h4>
                         <label for="atualizar-id">ID para Atualização:</label>
                         <input id="atualizar-id" type="text">
                     </div>
 
-                    <div>
+                    <div class="dados">
                         <label for="atualizar-nome">Novo Nome:</label>
                         <input id="atualizar-nome" type="text">
                     </div>
 
-                    <div>
+                    <div class="dados">
                         <label for="atualizar-email">Novo Email:</label>
                         <input id="atualizar-email" type="text">
                     </div>
 
-                    <div>
+                    <div class="dados">
                         <label for="atualizar-senha">Nova Senha:</label>
                         <input id="atualizar-senha" type="text">
-                        <button id="atualizar" class="btn btn-outline-warning">Atualizar</button>
                     </div>
 
                     <div>
+                        <button id="atualizar" class="btn btn-outline-warning">Atualizar</button>
+                    </div>
+
+                    <div class="dados">
                         <h4>Deletar Dados</h4>
-                        <label for="deletar-id">ID para Deleção:</label>
+                        <label for="deletar-id">ID para excluir:</label>
                         <input id="deletar-id" type="text">
+                        
+                    </div>
+
+                    <div>
                         <button id="deletar" class="btn btn-outline-warning">Deletar Conta</button>
                     </div>
                 

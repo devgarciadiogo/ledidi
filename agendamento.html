@@ -37,6 +37,10 @@
           <input id="Telefone-Cadastro" name="telefone" type="tel" placeholder="Insira seu telefone (sem DDD)">
         </div>
         <div class="secao-form">
+          <label for="Email-Cadastro">E-mail</label>
+          <input id="Email-Cadastro" name="email" type="email" placeholder="Insira seu seu e-mail">
+        </div>
+        <div class="secao-form">
           <label for="Date-Cadastro">Data e Hora</label>
           <input id="Date-Cadastro" name="dataHora" type="datetime-local">
         </div>
@@ -109,11 +113,12 @@
 
         // Envie os dados do formulário via AJAX
         $.ajax({
-          url: 'http://localhost:80/ledidi/agendamento.php', 
+          url: 'http://localhost:80/ledidi/back/agendamento.php', 
           method: 'GET',
           data: {
             tipo: 1,
             telefone: $("#Telefone-Cadastro").val(),
+            email: $("#Email-Cadastro").val(),
             dataHora: $("#Date-Cadastro").val(),
             servicos: $("#salao").val(),
             funcionarios: $("#profissional").val()

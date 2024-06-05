@@ -15,13 +15,14 @@ if (isset($_GET['tipo'])) {
     $db_context->conectar();
 
     if ($tipo == 1) {
-        if (isset($_GET['telefone']) && isset($_GET['dataHora']) && isset($_GET['servicos']) && isset($_GET['funcionarios'])) {
+        if (isset($_GET['telefone']) && isset($_GET['email']) && isset($_GET['dataHora']) && isset($_GET['servicos']) && isset($_GET['funcionarios'])) {
             $telefone = $_GET['telefone'];
+            $email = $_GET['email'];
             $dataHora = $_GET['dataHora'];
             $servicos = $_GET['servicos'];
             $funcionarios = $_GET['funcionarios'];
 
-            $resultado = $db_context->adicionar_agendamento($telefone, $dataHora, $servicos, $funcionarios);
+            $resultado = $db_context->adicionar_agendamento($telefone, $email, $dataHora, $servicos, $funcionarios);
             if ($resultado) {
                 $response = array('success' => true, 'message' => 'Agendamento realizado com sucesso!');
             } else {

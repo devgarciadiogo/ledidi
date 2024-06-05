@@ -39,7 +39,7 @@
   </header>
   <main>
     <div class="page">
-      <form method="GET" action="cadastro.php" id="formCadastro">
+      <form method="GET" action="back/cadastro.php" id="formCadastro">
         <h1>Cadastro</h1>
         <p>Insira as informações solicitadas para realizar seu cadastro!</p>
         <label for="nome">Nome</label>
@@ -82,7 +82,7 @@
 
         // Envie os dados do formulário via AJAX
         $.ajax({
-          url: 'http://localhost:80/ledidi/index.php', 
+          url: 'http://localhost:80/ledidi/back/index.php', 
           method: 'GET',
           data: {
             tipo: 1,

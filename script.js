@@ -17,7 +17,7 @@ document.getElementById('deletar').addEventListener('click', function() {
 });
 
 function fazerRequisicao(tipo, id, nome, email, senha) {
-    var url = `http://localhost/ledidi/index.php?tipo=${tipo}`;
+    var url = `http://localhost/ledidi/back/index.php?tipo=${tipo}`;
 
     if (id !== null && id !== undefined && id !== '') {
         url += `&id=${id}`;

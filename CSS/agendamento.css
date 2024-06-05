@@ -65,8 +65,32 @@ form label{
   width: 30%;
   height: 35px;
 }
-  
+
+#Email-Cadastro{
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 25px;
+  width: 30%;
+  height: 35px;
+}
+
 #Date-Cadastro{
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 25px;
+  width: 30%;
+  height: 35px;
+}
+
+#salao{
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 25px;
+  width: 30%;
+  height: 35px;
+}
+
+#profissional{
   display: block;
   margin-bottom: 20px;
   padding: 10px 25px;

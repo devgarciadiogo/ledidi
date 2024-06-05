@@ -74,8 +74,46 @@ footer{
     font-family: 'bond'; 
 }
 
-  #coluna-central{
-    padding: -50px 0 100px 0 ;
+#email-dados{
+  margin: 0.5rem 0 0 0;
+
+}
+
+#listar{
+  margin: 0.7rem 0 0 0;
+}
+
+.border-warning{
+  margin: -5rem 0 0 0;
+  padding: 0 0 0 0;
+  float: right;
+  margin-left: 0; 
+}
+
+#atualizar-dados{
+  margin: 1rem 0 0 0;
+  padding: 0 0 1rem 0;
+}
+
+#atualizar{
+  margin: 0.8rem 0 0 0;
+}
+
+#deletar{
+  margin: 0.8rem 0 0 0;
+}
+
+.dados{
+  margin: 1rem 0 0 0;
+  padding: 0 0 0 0;
+}
+
+#meus-agendamentos{
+  padding: 0.8rem 0 0 0;
+}
+
+#coluna-central{
+  padding: -50px 0 100px 0 ;
 }
   
   #endereco-footer{
