@@ -38,14 +38,15 @@ class DbContext {
             return json_encode($error);
         }
 
-        if ($resultado->num_rows > 0) {
+        if ($resultado instanceof mysqli_result) {
             $linhas = array();
-            while ($linha = $resultado ->fetch_assoc()) {
+            while ($linha = $resultado->fetch_assoc()) {
                 $linhas[] = $linha;
+            }
+            return json_encode($linhas);
+        } else {
+            return json_encode(array('success' => true));
         }
-        return json_encode ($linhas);
-    }
-    return json_encode($resultado);
     }
 
     public function adicionar($nome, $email, $senha) {
@@ -61,32 +62,19 @@ class DbContext {
             return json_encode($error);
         }
     }
-    public function adicionar_agendamento($telefone, $dataHora, $serviços, $funcionarios) {
-        $query = "INSERT INTO agendamentos(telefone, data_hora, serviço, profissional) VALUES ('"
-            . $this->conexao->real_escape_string($telefone) . "','"
-            . $this->conexao->real_escape_string($dataHora) . "','"
-            . $this->conexao->real_escape_string($serviços) . "','"
-            . $this->conexao->real_escape_string($funcionarios) . "')";
-        
-        if ($this->conexao->query($query) === TRUE) {
-            return $this->conexao->insert_id; 
-        } else {
-            $error = array('error' => $this->conexao->error);
-            return json_encode($error);
-        }
-    }
     
 
-    public function consultar(){
-        $query = "SELECT * FROM clientes ORDER BY id";
+    public function consultar($email) {
+        $email = $this->conexao->real_escape_string($email);
+        $query = "SELECT * FROM clientes WHERE email = '" . $email . "'";
         return $this->executar_query_sql($query);
     }
-
     public function atualizar($id, $nome, $email, $senha) {
         $query = "UPDATE clientes SET nome = '"
-            . $this->conexao->real_escape_string($nome) . "', nome = '"
-            . $this->conexao->real_escape_string($email) . "', email = '"
-            . $this->conexao->real_escape_string($senha) . "' senha = '";
+            . $this->conexao->real_escape_string($nome) . "', email = '"
+            . $this->conexao->real_escape_string($email) . "', senha = '"
+            . $this->conexao->real_escape_string($senha) . "' WHERE id = "
+            . $id;
     
         return $this->executar_query_sql($query);
     }

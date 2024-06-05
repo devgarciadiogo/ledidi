@@ -40,9 +40,15 @@ if ($tipo == 1) {
 
 // CONDIÇÃO PARA CONSULTAR A LISTA DE CLIENTES
 else if ($tipo == 2) {
-    $resultado = $db_context->consultar();
-    echo $resultado;
-} 
+    if (isset($_GET['email'])) {
+        $email = $_GET['email'];
+        $resultado = $db_context->consultar($email);
+        echo $resultado;
+    } else {
+        $resultado = $db_context->consultar($email);
+        echo $resultado;
+    }
+}
 // CONDIÇÃO PARA EDITAR UM CLIENTE
 else if ($tipo == 3) {
     if (isset($_GET['id']) && isset($_GET['nome']) && isset($_GET['email']) && isset($_GET['senha'])) {
@@ -59,7 +65,8 @@ else if ($tipo == 3) {
         $error = array('error' => 'Parâmetro ID, NOME, EMAIL ou SENHA não indicado na requisição');
         echo json_encode($error);
     }
-} 
+}
+
 // CONDIÇÃO PARA DELETAR UM CLIENTE
 else if ($tipo == 4) {
     if (isset($_GET['id'])) {

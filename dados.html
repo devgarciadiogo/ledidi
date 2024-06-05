@@ -36,20 +36,56 @@
 
             <main>
                 <div id="meus-dados">
+                    <h3>MEUS DADOS</h3>
                     <div>
-                        <h4>Nome: </h4>
+                        <h4>Listar Dados</h4>
+                        <label for="email">Email:</label>
+                        <input id="email" type="text">
+                        <button id="listar" class="btn btn-outline-warning">Listar</button>
+                                    
+                        <table border="1" class="table-bordered border-warning">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Nome</th>
+                                    <th>Email</th>
+                                    <th>Senha</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Linhas serão adicionadas aqui -->
+                            </tbody>
+                        </table>
                     </div>
+
                     <div>
-                        <h4>Telefone: </h4>
+                        <h4>Atualizar Dados</h4>
+                        <label for="atualizar-id">ID para Atualização:</label>
+                        <input id="atualizar-id" type="text">
                     </div>
+
                     <div>
-                        <h4>Email: </h4>
+                        <label for="atualizar-nome">Novo Nome:</label>
+                        <input id="atualizar-nome" type="text">
                     </div>
+
                     <div>
-                        <h4>Senha: </h4>
+                        <label for="atualizar-email">Novo Email:</label>
+                        <input id="atualizar-email" type="text">
                     </div>
-                    
-                </div>
+
+                    <div>
+                        <label for="atualizar-senha">Nova Senha:</label>
+                        <input id="atualizar-senha" type="text">
+                        <button id="atualizar" class="btn btn-outline-warning">Atualizar</button>
+                    </div>
+
+                    <div>
+                        <h4>Deletar Dados</h4>
+                        <label for="deletar-id">ID para Deleção:</label>
+                        <input id="deletar-id" type="text">
+                        <button id="deletar" class="btn btn-outline-warning">Deletar Conta</button>
+                    </div>
                 
                 <div id="meus-agendamentos">
                     <h3>MEUS AGENDAMENTOS</h3>
@@ -63,12 +99,9 @@
                     <div>
                         <h4>Data e hora: </h4>
                     </div>
-
                 </div>
-                <button id="atualizar-dados" class="botao-dados">Atualizar</button>
-                <button id="deletar-dados" class="botao-dados">Deletar Conta</button>
-                <button id="listar">listar</button>
-            </main>
+                
+            </main>            
 
             <footer>
                 <hr>
@@ -114,50 +147,7 @@
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script src="script.js"></script>
             <script>
-                $(document).ready(function() {
-                    var urlParams = new URLSearchParams(window.location.search);
-                    var clienteId = urlParams.get('id'); 
-                
-                    if (clienteId) {
-                        // Faça a requisição para obter os dados do cliente
-                        $.ajax({
-                            url: 'http://localhost/ledidi/index.php',
-                            method: 'GET',
-                            data: {
-                                tipo: 2, // Tipo 2 para consultar
-                                id: clienteId
-                            },
-                            dataType: 'json',
-                            success: function(response) {
-                                if (response.success) {
-                                    $('#meus-dados').html(
-                                        `<div>
-                                            <h4>Nome: ${response.nome}</h4>
-                                        </div>
-                                        <div>
-                                            <h4>Telefone: ${response.telefone}</h4>
-                                        </div>
-                                        <div>
-                                            <h4>Email: ${response.email}</h4>
-                                        </div>
-                                        <div>
-                                            <h4>Senha: ${response.senha}</h4>
-                                        </div>`
-                                    );
-                                } else {
-                                    alert('Erro ao buscar dados do cliente');
-                                }
-                            },
-                            error: function(xhr, status, error) {
-                                console.error('Erro na requisição:', xhr, status, error);
-                                alert('Erro na requisição: ' + xhr.responseText);
-                            }
-                        });
-                    } else {
-                        alert('ID do cliente não fornecido na URL');
-                    }
-                });
-                </script>
+            </script>
                       
     </body>
 </html>
